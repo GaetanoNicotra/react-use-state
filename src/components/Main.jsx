@@ -37,10 +37,10 @@ const Main = () => {
     ];
     return (
         <div className="container">
-            <h1>Learn Web Development</h1>
+            <header><h1>Learn Web Development</h1></header>
             <ul id='list-button'>
                 {languages.map((language) => (
-                    <ButtonsGenerator language={language} key={`id-${language.id}`} title={language.title} description={language.description} isOpen={isOpen === language.id} onToggle={() => setIsOpen(language.id)} />
+                    <ButtonsGenerator language={language} key={`id-${language.id}`} title={language.title} description={language.description} isOpen={isOpen === language.id} onToggle={() => setIsOpen(isOpen === language.id ? null : language.id)} />
                 ))}
             </ul>
         </div>

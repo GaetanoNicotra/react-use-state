@@ -1,13 +1,41 @@
+body {
+    font-family: Open sans;
+}
+
 #list-button {
     display: flex;
     list-style-type: none;
-    gap: 15px;
+    gap: 18px;
 }
 
 button {
     background-color: rgb(0, 122, 221);
-    padding: 20px 30px;
+    padding: 15px 30px;
     color: white;
-    border-radius: 20%;
+    border-radius: 8%;
     border: none;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+}
+
+header {
+    background-color: rgb(201, 201, 201);
+    padding: 30px;
+    font-size: 20px;
+}
+
+.caption {
+    width: 300px;
+}
+
+button:active {
+    background-color: rgb(255, 196, 0);
+    color: black;
 }
