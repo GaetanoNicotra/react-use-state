@@ -38,7 +38,7 @@ const Main = () => {
         <div className="container">
             <h1>Learn Web Development</h1>
 
-            <ul>
+            <ul id='list-button'>
                 <li><button>HTML</button></li>
                 <li><button>CSS</button></li>
                 <li><button>JavaScript</button></li>
