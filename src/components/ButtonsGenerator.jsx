@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from "react";
 
-function ButtonsGenerator(props) {
-    const [isOpen, setIsOpen] = useState(false);
+function ButtonsGenerator({ language, isOpen, onToggle }) {
+    //  const [isOpen, setIsOpen] = useState(false);
     return (
-        <li><button onClick={() => setIsOpen(!isOpen)}> {props.title}</button>
-            {isOpen && <div className="caption"> {props.description}</div>}</li>
+        <li><button onClick={onToggle}> {language.title} </button>
+            {isOpen ? <div className="caption"> {language.description} </div> : ""}</li>
     )
 };
 

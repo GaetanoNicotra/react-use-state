@@ -1,6 +1,8 @@
 import React from 'react'
 import ButtonsGenerator from './ButtonsGenerator';
+import { useState } from 'react';
 const Main = () => {
+    const [isOpen, setIsOpen] = useState(null);
     const languages = [
         {
             id: 1,
@@ -38,12 +40,11 @@ const Main = () => {
             <h1>Learn Web Development</h1>
             <ul id='list-button'>
                 {languages.map((language) => (
-                    <ButtonsGenerator key={`id-${language.id}`} title={language.title} description={language.description} />
+                    <ButtonsGenerator language={language} key={`id-${language.id}`} title={language.title} description={language.description} isOpen={isOpen === language.id} onToggle={() => setIsOpen(language.id)} />
                 ))}
             </ul>
         </div>
-
-    )
-}
+    );
+};
 
 export default Main;
