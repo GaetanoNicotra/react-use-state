@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ButtonsGenerator from './ButtonsGenerator';
 const Main = () => {
     const languages = [
         {
@@ -34,19 +34,13 @@ const Main = () => {
         }
     ];
     return (
-
         <div className="container">
             <h1>Learn Web Development</h1>
-
             <ul id='list-button'>
-                <li><button>HTML</button></li>
-                <li><button>CSS</button></li>
-                <li><button>JavaScript</button></li>
-                <li><button>Node.js</button></li>
-                <li><button>Express</button></li>
-                <li><button>ReactJS</button></li>
+                {languages.map((language) => (
+                    <ButtonsGenerator key={`id-${language.id}`} title={language.title} description={language.description} />
+                ))}
             </ul>
-
         </div>
 
     )
