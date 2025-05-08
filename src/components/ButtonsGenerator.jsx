@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function ButtonsGenerator(props) {
+    const [isOpen, setIsOpen] = useState(false);
     return (
-        <li><button> {props.title}</button><div className="caption"> {props.description}</div></li>
+        <li><button onClick={() => setIsOpen(!isOpen)}> {props.title}</button>
+            {isOpen && <div className="caption"> {props.description}</div>}</li>
     )
 };
 
